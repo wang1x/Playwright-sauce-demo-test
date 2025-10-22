@@ -73,7 +73,7 @@ Setting up Playwright on Windows:
   6. Generate Reports (optional)
      For HTML reports:
      pip install pytest-html
-     pytest --html=report.html --self-contained-html
+     pytest --html=reports/report.html --self-contained-html
 
 Add dependencies manually
   write this inside requirements.txt
