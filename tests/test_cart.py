@@ -2,10 +2,13 @@ import pytest
 from playwright.sync_api import sync_playwright
 
 # 使用 pytest fixture 启动和关闭浏览器
+
+
 @pytest.fixture(scope="function")
 def browser_context():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)  # 改成 False 可以看到真实浏览器
+        # browser = p.chromium.launch(headless=True)  # 改成 False 可以看到真实浏览器
+        browser = p.chromium.launch(headless=False)
         context = browser.new_context()
         page = context.new_page()
         yield page
